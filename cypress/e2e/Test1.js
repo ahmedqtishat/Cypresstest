@@ -11,7 +11,10 @@ let expected = 6
          
            
            if (i%2==1){
-            cy.get('div#inventory_container').find('.btn').eq(i).click()
+            cy.get('div#inventory_container').find('.btn').eq(i).click().then((element)=>{
+                console.log(element.text()+" all elemnt has been clicked")
+                cy.log(element.text()+" all elemnt has been clicked")
+            })
            }
         
         }
